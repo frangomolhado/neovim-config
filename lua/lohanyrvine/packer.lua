@@ -1,5 +1,5 @@
 return require('packer').startup(function(use)
-    use 'wbthomason/packer.nvim'
+    use('wbthomason/packer.nvim')
 
     use('nvim-lua/plenary.nvim')
 
@@ -11,7 +11,7 @@ return require('packer').startup(function(use)
 
     use('tpope/vim-commentary')
 
-    use {
+    use({
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
         requires = {
@@ -25,7 +25,7 @@ return require('packer').startup(function(use)
             { 'hrsh7th/cmp-nvim-lsp' },
             { 'L3MON4D3/LuaSnip' },
         }
-    }
+    })
 
     use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
 
@@ -35,7 +35,7 @@ return require('packer').startup(function(use)
 
     use('nvim-lualine/lualine.nvim')
 
-    use('ellisonleao/gruvbox.nvim')
+    use({ 'catppuccin/nvim', as = 'catppuccin' })
 
     use('xiyaowong/transparent.nvim')
 end)
